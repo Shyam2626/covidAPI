@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('covid.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.title {
+    margin: 1rem;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    text-shadow:
+        1px 5px 4px rgba(0, 0, 0, .3),
+        0 0 2px rgba(255, 255, 255, 1),
+        0 0 10px rgba(255, 255, 255, 1),
+        0 0 20px rgba(255, 255, 255, 1),
+        0 0 30px rgba(255, 255, 255, 1),
+        0 0 40px #ff00de,
+        0 0 70px #ff00de,
+        0 0 80px #ff00de,
+        0 0 100px #ff00de;
+}
+
+.title span {
+    animation: blink .3s infinite alternate;
+}
+.content {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 40%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textbox {
+    width: 50%;
+    height: 3rem;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #C3E0E5;
+    border: 3px solid;
+}
+
+.btn{
+    background: url('search.jpg');
+    width:50px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.display h1 {
+    border-radius: 10px;
+    border: 5px solid;
+    border-color: #D9E4EC;
+    font-size: 1.5rem;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    backdrop-filter: blur(10px); /* Apply the blur effect to the background */
+    text-align: center;
+}
+
+.display span{
+    color: #FAD02C;
+}
+
+.result{
+    margin: 1rem;
+}
+
+.search{
+    width:auto;
+    height: 1.5rem;
+    border: 2px solid darkcyan;
+    padding: 2px;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0% {}
+    50% {}
+    60% {
+        text-shadow:
+            0 0 2px rgba(255, 255, 255, .1),
+            0 0 10px rgba(255, 255, 255, .4);
+
+        text-stroke: 2px rgba(255, 255, 255, 0.05);
+    }
+    70% {
+        text-shadow:
+            0 0 2px rgba(255, 255, 255, 1),
+            0 0 10px rgba(255, 255, 255, 1),
+            0 0 20px rgba(255, 255, 255, 1),
+            0 0 30px rgba(255, 255, 255, 1),
+            0 0 40px #ff00de,
+            0 0 70px #ff00de,
+            0 0 80px #ff00de,
+            0 0 100px #ff00de;
+    }
+    80% {
+        text-shadow:
+            0 0 2px rgba(255, 255, 255, .1),
+            0 0 10px rgba(255, 255, 255, .4);
+
+        text-stroke: 2px rgba(255, 255, 255, 0.05);
+    }
+    100% {
+        text-shadow:
+            0 0 2px rgba(255, 255, 255, 1),
+            0 0 10px rgba(255, 255, 255, 1),
+            0 0 20px rgba(255, 255, 255, 1),
+            0 0 30px rgba(255, 255, 255, 1),
+            0 0 40px #ff00de,
+            0 0 70px #ff00de,
+            0 0 80px #ff00de,
+            0 0 100px #ff00de;
+    }
+}
+
+@media (max-width: 480px) {
+    .content{
+        width: 80%;
+    }
+   .title{
+    font-size: 1.5rem;
+   }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .content{
+        width: 80%;
+    }
+    .search{
+        width:20%;
+        height: 2rem;
+        margin: 1.5rem 0;
+    }
+    .display h1{
+        width: 30%;
+        height: 2rem;
+        margin: 2rem 0;
+
+    }
+}
+
