@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const app = express();
 
-mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster1.0sfxnq9.mongodb.net/covid`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(`${process.env.MONGODB_URL}/covid`, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const countrySchema = new mongoose.Schema({
     totalcases: Number,
